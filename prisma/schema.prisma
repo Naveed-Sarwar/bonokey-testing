@@ -1,0 +1,62 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgres://fleeulqhmolmis:1a38742c9566fa32e6f2ca706b10b5ce25276d47e55eb8217c0f21b48f9cd088@ec2-34-231-42-166.compute-1.amazonaws.com:5432/d9m72hta2qplhn"
+
+}
+
+model SaleRep {
+    id                  Int         @id @default(autoincrement())
+    name                String
+    mobile              String
+    email               String
+    branch              String
+    bank                Bank        @relation(fields: [bankId], references: [id])
+    bankId              Int
+}
+
+model Bank {
+    id                  Int         @id @default(autoincrement())
+    name                String
+    nameAR              String
+    logo                String
+    address             String
+    url                 String
+    salaryTransfer      Boolean?    @default(false)
+    minSalary           Int?        @default(3000)
+    minLoan             Int?        @default(50000)
+    offer               Boolean?    @default(false)
+    aprValues           AprValue[]
+    saleReps            SaleRep[]
+}
+
+model Salary {
+    id          Int         @id @default(autoincrement())
+    min         Int
+    max         Int
+    aprValues   AprValue[]
+}
+
+model Sector {
+    id          Int         @id @default(autoincrement())
+    name        String
+    nameAR      String
+    aprValues   AprValue[]
+}
+
+model AprValue {
+    id          Int         @id @default(autoincrement())
+    bank        Bank        @relation(fields: [bankId], references: [id])
+    bankId      Int
+    salary      Salary      @relation(fields: [salaryId], references: [id])
+    salaryId    Int
+    sector      Sector      @relation(fields: [sectorId], references: [id])
+    sectorId    Int
+    value       Float
+}

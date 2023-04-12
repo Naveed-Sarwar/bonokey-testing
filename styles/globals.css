@@ -1,0 +1,41 @@
+/* html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito", "Tajawal", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+} */
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #fdfdfc;
+
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

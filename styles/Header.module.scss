@@ -1,0 +1,162 @@
+.header {
+  width: 100%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  .wrapper {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 1227px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+
+    .logo {
+      position: relative;
+      margin: 0 auto 0 0;
+      width: 200px;
+      height: 67px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .list {
+      margin: 0 0 0 auto;
+      padding: 0;
+      display: flex;
+      list-style: none;
+
+      li {
+        margin: 0 40px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+          font-family: "Cabin", sans-serif;
+          font-size: 16px;
+          font-weight: 500;
+          color: #624b77;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .mobileButton {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 0 auto;
+      width: 30px;
+      background: transparent;
+      outline: none;
+      border: none;
+
+      svg {
+        width: 100%;
+        fill: #624b77;
+      }
+    }
+
+    .mobileList {
+      z-index: 1;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0;
+      padding: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: #fff;
+      list-style: none;
+
+      li {
+        margin: 20px auto;
+
+        a {
+          font-family: "Cabin", sans-serif;
+          font-size: 18px;
+          font-weight: 500;
+          color: #624b77;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .close {
+        position: absolute;
+        top: 19.5px;
+        right: 20px;
+        margin: 0;
+        padding: 0;
+
+        button {
+          width: 30px;
+          background: transparent;
+          outline: none;
+          border: none;
+
+          svg {
+            width: 100%;
+            fill: #624b77;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header .wrapper .mobileButton {
+    display: flex;
+  }
+
+  .header .wrapper .list {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .header .wrapper .logo {
+    width: 145px;
+    height: 41px;
+  }
+}
+
+.contactus{
+ 
+  position: absolute;
+  top: 19.5px;
+  right: 20px;
+  margin: 0;
+  padding: 0;
+
+  button {
+    width: 30px;
+    background: transparent;
+    outline: none;
+    border: none;
+  }
+    svg {
+      width: 100%;
+      fill: #624b77;
+
+}
+}

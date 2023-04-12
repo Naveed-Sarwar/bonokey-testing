@@ -1,0 +1,486 @@
+.bank {
+    // margin: 20px auto;
+    // padding: 0;
+    // width: 100%;
+    // border: 1px solid #624b77;
+    // border-radius: 7px;
+    // display: flex;
+    // flex-direction: column;
+
+    margin: 20px auto;
+    padding: 0;
+    width: 100%;
+    background-color: #fdfdfc;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+
+    // transition: transform 0.15s;
+    // &:hover {
+    //     transform: scale(1.01);
+    // }
+
+    .name {
+        margin: 20px auto 0;
+        padding: 0;
+        font-family: auto;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+        color: #624b77;
+    }
+
+    .info {
+        display: flex;
+        margin: 15px 25px 15px 65px;
+
+        .logo {
+            margin: 10px auto 0;
+            display: block;
+            width: 140px;
+        }
+
+        .apr {
+            margin: auto 15px;
+
+            h6 {
+                position: relative;
+                margin: 0;
+                text-align: center;
+                padding: 0;
+                font-family: "Nunito", sans-serif;
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 55px;
+                color: #007aff;
+
+                span {
+                    position: absolute;
+                    bottom: 65%;
+                    right: 7.5%;
+                    font-family: "Nunito", sans-serif;
+                    font-weight: 700;
+                    font-size: 13px;
+                    line-height: 18px;
+                    color: #c04675;
+                }
+            }
+
+            p {
+                max-width: 233px;
+                margin: -5px 0 0;
+                padding: 0;
+                font-family: "Nunito", sans-serif;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 28px;
+                text-align: center;
+                color: #624b77;
+            }
+        }
+
+        .text {
+            margin: auto 0;
+            padding: 5px 25px;
+            border-right: 1px solid #5e5e5e;
+
+            h6 {
+                margin: 0 0 7.5px;
+                padding: 0;
+                font-family: "Nunito", sans-serif;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 24px;
+                text-align: center;
+                color: #624b77;
+            }
+
+            p {
+                margin: 7.5px 0 0;
+                padding: 0;
+                font-family: "Nunito", sans-serif;
+                font-weight: 700;
+                font-size: 13px;
+                line-height: 18px;
+                text-align: center;
+                color: #624b77;
+            }
+        }
+
+        .contact {
+            min-width: 150px;
+            cursor: pointer;
+            margin: 25px 0 auto auto;
+            padding: 10px 0;
+            font-family: "Cabin", sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            color: #fff;
+            background: #c04675;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+        }
+    }
+
+    .details {
+        display: flex;
+        margin: 0;
+        padding: 0 25px 0 65px;
+        width: 100%;
+        background-color: #eff0eb;
+        border-radius: 0 0 7px 7px;
+
+        .text {
+            margin: 0 auto;
+            padding: 10px 0;
+            font-family: "Nunito", sans-serif;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 23px;
+            text-align: center;
+            color: #5e5e5e;
+        }
+
+        .content {
+            width: 100%;
+            margin: 30px 0;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+
+            .features {
+                margin: 0 auto 0 20px;
+
+                h6 {
+                    margin: 0;
+                    padding: 0;
+                    font-family: "Nunito", sans-serif;
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 17px;
+                    text-transform: uppercase;
+                    color: #624b77;
+                }
+
+                .list {
+                    margin: 0;
+                    padding: 0 0 0 25px;
+                    font-family: "Nunito", sans-serif;
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 17px;
+                    color: #624b77;
+                }
+            }
+
+            .detail {
+                margin: auto 20px;
+
+                .icon {
+                    margin: 0 auto;
+                    position: relative;
+                    width: 42px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    svg {
+                        width: 100%;
+                    }
+                }
+
+                h6 {
+                    margin: 20px 0 0;
+                    padding: 0;
+                    font-family: "Nunito", sans-serif;
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 17px;
+                    text-align: center;
+                    color: #624b77;
+                }
+
+                p {
+                    margin: 0;
+                    padding: 0;
+                    font-family: "Nunito", sans-serif;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 17px;
+                    text-align: center;
+                    color: #624b77;
+                }
+            }
+        }
+
+        button {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            margin-top: 11px;
+            margin-bottom: auto;
+            font-family: "Cabin", sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: #c04675;
+            background: transparent;
+            outline: none;
+            border: none;
+
+            .icon {
+                position: relative;
+                margin-left: 10px;
+                width: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                svg {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .phoneContact {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        // background-color: rgba(0, 0, 0, 0.0);
+        backdrop-filter: blur(3px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+
+        .contentDiv {
+            border: 1px solid #624b77;
+            border-radius: 7px;
+            width: auto;
+            max-width: 600px;
+            text-align: center;
+            padding: 40px;
+            background-color: white;
+            // overflow-y: auto;
+            position: relative;
+            margin: 0 6px;
+
+            p {
+                font-family: "Nunito", sans-serif;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 23px;
+                text-align: center;
+                color: #5e5e5e;
+            }
+
+            .inputContainer {
+                position: relative;
+                width: 100%;
+                border: 1px solid #624b77;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                padding: 10px;
+
+                label {
+                    position: absolute;
+                    top: -10px;
+                    left: 40px;
+                    padding: 0 15px;
+                    font-family: "Cabin", sans-serif;
+                    font-weight: 700;
+                    font-size: 13px;
+                    line-height: 16px;
+                    color: #624b77;
+                    background-color: #fff;
+                }
+
+                input {
+                    margin: 0 25px;
+                    width: 100%;
+                    font-family: "Cabin", sans-serif;
+                    font-weight: 700;
+                    font-size: 19px;
+                    line-height: 39px;
+                    color: #5e5e5e;
+                    background: transparent;
+                    outline: none;
+                    border: none;
+
+                    &::placeholder {
+                        color: #5e5e5e50;
+                    }
+
+                    &:disabled {
+                        color: rgba(156, 156, 156);
+                    }
+                }
+            }
+
+            .verifyButton {
+                cursor: pointer;
+                padding: 15px 50px;
+                font-family: "Cabin", sans-serif;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 20px;
+                color: #fff;
+                background-color: #c04675;
+                outline: none;
+                border: none;
+                border-radius: 5px;
+
+                &:disabled {
+                    cursor: not-allowed;
+                    opacity: 0.5;
+                }
+            }
+
+            .verificationCodeInputDigit {
+                width: 40px;
+                height: 40px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                margin: 0 10px;
+                font-size: 24px;
+                font-weight: bold;
+                transition: border-color 0.2s ease-in-out;
+
+                input {
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 1;
+                    // cursor: pointer;
+
+                    &:focus {
+                        border-color: #0070f3;
+                        box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.5);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mobileShow {
+    display: none;
+}
+
+@media only screen and (max-width: 1012px) {
+    .bank {
+        .info {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 1fr 1fr 1fr 1fr auto;
+            grid-template-areas: "logo logo" "apr apr" "loan installment" "total fees" "contact contact";
+            margin: 15px 25px;
+
+            .logo {
+                grid-area: logo;
+            }
+
+            .apr {
+                grid-area: apr;
+                margin: 0 auto;
+            }
+
+            .text {
+                margin: 0 auto;
+                padding: 20px 25px;
+                border-left: 0;
+
+                h6 {
+                    white-space: nowrap;
+                }
+
+                p {
+                    text-align: center;
+                    margin: 0 auto;
+                    width: 65px;
+                }
+            }
+
+            .contact {
+                grid-area: contact;
+                width: 100%;
+                margin: 10px auto;
+                padding: 20px 0;
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+
+        .details {
+            padding: 0 25px;
+
+            button {
+                margin-left: 0 !important;
+            }
+
+            .content {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-gap: 10px 0;
+
+                .features {
+                    display: none;
+                }
+
+                .detail {
+                    height: 100%;
+                    margin-top: 0;
+                    margin-bottom: auto;
+                    display: flex;
+                    flex-direction: column;
+
+                    h6 {
+                        margin: 0 auto 10px;
+                    }
+
+                    p {
+                        margin: auto auto 0;
+                    }
+
+                    .icon {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .mobileHide {
+        display: none !important;
+    }
+
+    .mobileShow {
+        display: block !important;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .bank {
+        .details {
+            flex-direction: column-reverse;
+
+            button {
+                margin: 20px auto !important;
+            }
+
+            .content {
+                margin-top: 0;
+            }
+        }
+    }
+}
