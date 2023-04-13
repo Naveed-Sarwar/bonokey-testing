@@ -12,6 +12,7 @@ import prisma from "../prisma/prisma";
 import { brandColors, uiBreakpoint } from "../utils/helpers";
 import { useTranslation } from "react-i18next";
 import NewSearchBar from "../components/new/NewSearchBar";
+import NewBankCardOldDesign from "../components/new/NewBankCardOldDesign";
 
 type Props = {
   banksArray: BankType[];
@@ -288,14 +289,17 @@ function Compare(props: Props) {
             <BanksSkeletons />
           ) : filteredProcessedBanksArray.length > 0 && !errorString ? (
             <div>
-              <div style={{ display: "flex", justifyContent: "flex-end" }}>
+              <div style={{ display: "flex", justifyContent: "flex-start" , textAlign: "left" }}>
                 <div></div>
                 <div
                   style={{
                     marginBottom: "24px",
                     display: "flex",
-                    gap: "6px",
-                    alignItems: "center",
+                    justifyContent: "flex-start",
+                    // float: "left",
+                    // gap: "6px",
+                    alignItems: "left",
+                    marginLeft: "-30px",
                   }}
                 >
                   <FilterSelect
@@ -308,13 +312,13 @@ function Compare(props: Props) {
                     style={{ textAlign: "right" }}
                   >
                     <option key={0} value="all">
-                    By lowest APR &#xf1de;
+                    تصفية حسب &#xf1de;
                     </option>
                     <option key={1} value="offers">
-                    Offers &#xf1de;
+                    عروض &#xf1de;
                     </option>
                     <option key={2} value="no-salary-transfer">
-                    No salary transfer &#xf1de;
+                    بدون تحويل الراتب &#xf1de;
                     </option>
                   </FilterSelect>
                   {/* <FaSlidersH color={brandColors.black} size={18} /> */}
@@ -327,7 +331,7 @@ function Compare(props: Props) {
                     key={index}
                   >
                     {/* <BankCard index={index} bank={bank} phoneNumberVerified={phoneNumberVerified} setPhoneNumberVerified={setPhoneNumberVerified} /> */}
-                    <BankCardOldDesign
+                    <NewBankCardOldDesign
                       index={index}
                       bank={bank}
                       phoneNumberVerified={phoneNumberVerified}

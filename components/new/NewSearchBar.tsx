@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import { Sector } from "@prisma/client";
 import { useTranslation } from "react-i18next";
+import "../../languages/IMLocalize";
 
 type Props = {
   isOnHomePage: boolean;
@@ -375,7 +376,7 @@ function NewSearchBar(props: Props) {
             )}
           </InputDiv>{" "}
           <InputDiv selected={jobSectorFocused}>
-            <InputHeadline>{t("index:jobSector")}</InputHeadline>
+            <InputHeadline>اعمل في</InputHeadline>
             <JobSectorSelect
               onFocus={() => setJobSectorFocused(true)}
               onBlur={() => setJobSectorFocused(false)}
@@ -386,16 +387,16 @@ function NewSearchBar(props: Props) {
               defaultValue={jobSector}
             >
               <option key={0} value="Government">
-                {t("index:government")}
+                قطاع حكومي{" "}
               </option>
               <option key={1} value="Semi-government">
-                {t("index:semiGovernment")}
+                قطاع شبه حكومي{" "}
               </option>
               <option key={2} value="Private">
-                {t("index:private")}
+                قطاع خاص{" "}
               </option>
               <option key={3} value="Military">
-                {t("index:military")}
+                قطاع عسكري
               </option>
             </JobSectorSelect>
           </InputDiv>

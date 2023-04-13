@@ -26,21 +26,6 @@ const SearchBarDiv = styled.div`
   );
 `;
 
-useEffect(()=>{
-
-  async function checkDatabaseConnection() {
-    try {
-      await prisma.$connect(); // Attempt to connect to the database
-      console.log('Database connected successfully!');
-    } catch (error) {
-      console.error('Failed to connect to database:', error);
-    } finally {
-      await prisma.$disconnect(); // Close the database connection
-    }
-  }
-  
-  checkDatabaseConnection();
-}, [])
 
 
 

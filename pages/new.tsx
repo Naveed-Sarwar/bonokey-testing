@@ -31,27 +31,7 @@ class Home extends React.Component<any, any> {
         <NewWhyUs />
         <NewContact />
         <NewFooter />
-        <NewBankCardOldDesign index={0} bank={{
-          name: "",
-          logo: "",
-          mobile: "",
-          apr: 0,
-          loan: 0,
-          monthly: 0,
-          total: 0,
-          fees: 0,
-          maxLoan: 0,
-          salaryTransfer: false,
-          revenue: 0,
-          minLoan: 0,
-          offer: false,
-          useMaxLoan: false,
-          loanDurationInYears: 0,
-          sector: "",
-          userMonthlySalary: 0
-        }} phoneNumberVerified={false} setPhoneNumberVerified={function (value: React.SetStateAction<boolean>): void {
-          throw new Error("Function not implemented.");
-        } } />
+
       </div>
     );
   }

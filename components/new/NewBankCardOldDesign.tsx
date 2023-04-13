@@ -217,40 +217,40 @@ function NewBankCardOldDesign(props: Props) {
 
         <div className={styles.apr}>
           <h6>
-            {props.bank.apr.toFixed(2)}%<span>fixed</span>
+            {props.bank.apr.toFixed(2)}%<span>ثابتة</span>
           </h6>
-          <p>Annual percentage rate (APR)</p>
+          <p>معدل النسبة السنوي (APR)</p>
         </div>
 
         <div className={styles.text}>
           <div>
             <h6>{formatNumber(props.bank.loan.toFixed(0))}</h6>
-            <p>SAR</p>
+            <p>ريال سعودي</p>
           </div>
-          <p>{props.bank.useMaxLoan ? "Max Loan" : "Loan Amount"}</p>
+          <p>{props.bank.useMaxLoan ? "ماكس القرض" : "مبلغ التمويل"}</p>
         </div>
 
         <div className={styles.text}>
           <div>
             <h6>{formatNumber(props.bank.monthly.toFixed(0))}</h6>
-            <p>SAR</p>
+            <p>ريال سعودي</p>
           </div>
-          <p>Monthly Installment</p>
+          <p>القسط الشهري</p>
         </div>
 
         <div className={styles.text}>
-          <h6></h6>
+          {/* <h6></h6> */}
           <div>
             <h6>{formatNumber(props.bank.total.toFixed(0))}</h6>
-            <p>SAR</p>
+            <p>ريال سعودي</p>
           </div>
-          <p>Total Amount</p>
+          <p>المستحقات الاجمالية</p>
         </div>
 
         <div className={`${styles.text} ${styles.mobileShow}`}>
           <div>
             <h6>{props.bank.fees.toFixed(0)}</h6>
-            <p>SAR</p>
+            <p>ريال سعودي</p>
           </div>
           <p>Admin Fees</p>
         </div>
@@ -259,7 +259,7 @@ function NewBankCardOldDesign(props: Props) {
           className={`${styles.contact} ${styles.mobileHide}`}
           onClick={() => setShowContactPrompt(!showContactPrompt)}
         >
-          Contact <br /> Bank Representative
+          التواصل مع ممثل <br /> البنك{" "}
         </button>
 
         <button
@@ -271,21 +271,30 @@ function NewBankCardOldDesign(props: Props) {
       </div>
 
       <div className={styles.details}>
-        <div style={{ margin: "0 auto" }}>
+        <div style={{ margin: "0 auto" , direction: "rtl" }}>
           <p className={styles.text}>
-            The APR may vary depending on the loan amount, salary, employer, and
-            term. It may be affected by each client’s credit scoring.
+            قد يختلف معدل النسبة السنوي اعتماداً على مبلغ التمويل والراتب وجهة
+            العمل ومدة استحقاق التمويل المختلفة وقد تتأثر بالسجل الائتماني الخاص
+            لكل عميل
+            {/* The APR may vary depending on the loan amount, salary, employer, and
+            term. It may be affected by each client’s credit scoring. */}
           </p>
           {showDetail && (
             <div className={styles.content}>
               <div className={styles.features}>
-                <h6>Features</h6>
+                {/* <h6>Features</h6> */}
+                <h5>مميزات التمويل الشخصي</h5>
                 <ul className={styles.list}>
-                  <li>Shariah compliant.</li>
-                  <li>Instant approval.</li>
-                  <li>Repayment periods from 3 months up to 12 months.</li>
-                  <li>Possibility of early settlement.</li>
-                  <li>
+                  {/* <li>Shariah compliant.</li> */}
+                  <li>متوافق مع احكام الشريعة</li>
+                  <li>هامش ربح تنافسي وثابت طوال فترة التمويل</li>
+             <li>إيداع سريع للمبلغ خلال 24 ساعة</li>
+             <li>إمكانية التسوية المبكرة</li>
+             <li>امكانية تأجيل تقسيط شهر رمضان</li>
+                  {/* <li>Instant approval.</li> */}
+                  {/* <li>Repayment periods from 3 months up to 12 months.</li>
+                  <li>Possibility of early settlement.</li> */}
+                  <li style={{visibility: "hidden"}}>
                     Possibility of postponing the installment of the month of
                     Ramadan.
                   </li>
@@ -431,7 +440,8 @@ function NewBankCardOldDesign(props: Props) {
                     />
                   </svg>
                 </i>
-                <h6>Admin Fees + Tax</h6>
+                {/* <h6>Admin Fees + Tax</h6> */}
+                <h6>الرسوم الادارية</h6>
                 <p>{props.bank.fees.toFixed(0)}</p>
               </div>
 
@@ -574,7 +584,8 @@ function NewBankCardOldDesign(props: Props) {
                     />
                   </svg>
                 </i>
-                <h6>Max Loan</h6>
+                {/* <h6>Max Loan</h6> */}
+                <h6>الحد الاعلى للتمويل</h6>
                 <p>{props.bank.maxLoan.toFixed(0)}</p>
               </div>
 
@@ -717,7 +728,8 @@ function NewBankCardOldDesign(props: Props) {
                     />
                   </svg>
                 </i>
-                <h6>Salary Transfer</h6>
+                {/* <h6>Salary Transfer</h6> */}
+                <h6>تحويل الراتب</h6>
                 <p>{props.bank.salaryTransfer ? "Yes" : "No"}</p>
               </div>
 
@@ -860,7 +872,8 @@ function NewBankCardOldDesign(props: Props) {
                     />
                   </svg>
                 </i>
-                <h6>Bank&apos;s Profit</h6>
+                <h6>ربح  <br /> البنك</h6>
+                {/* <h6>Bank&apos;s Profit</h6> */}
                 <p>{props.bank.revenue.toFixed(0)}</p>
               </div>
 
@@ -1003,7 +1016,8 @@ function NewBankCardOldDesign(props: Props) {
                     />
                   </svg>
                 </i>
-                <h6>Min Loan</h6>
+                <h6>أقل مبلغ تمويل</h6>
+                {/* <h6>Min Loan</h6> */}
                 <p>{props.bank.minLoan.toFixed(0)}</p>
               </div>
             </div>
@@ -1014,7 +1028,9 @@ function NewBankCardOldDesign(props: Props) {
           style={showDetail ? { marginLeft: 25 } : { marginLeft: 10 }}
           onClick={() => setShowDetail(!showDetail)}
         >
-          {showDetail ? "Hide" : "Details"}
+                    {/* {showDetail ? "Hide" : "Details"} */}
+
+          {showDetail ? "اخفاء" : "التفاصيل"}
           <i className={styles.icon}>
             {!showDetail ? (
               <svg
@@ -1036,7 +1052,6 @@ function NewBankCardOldDesign(props: Props) {
           </i>
         </button>
       </div>
-
       {/* Contact Prompt */}
       {showContactPrompt && (
         <PromptDiv onClick={() => setShowContactPrompt(!showContactPrompt)}>
@@ -1132,7 +1147,7 @@ function NewBankCardOldDesign(props: Props) {
                         }
                       }}
                     >
-              أرسل رمز التحقق
+                      أرسل رمز التحقق
                       {/* Send verification code */}
                     </PromptButton>
                   </div>
