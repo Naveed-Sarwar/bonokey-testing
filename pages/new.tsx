@@ -12,6 +12,7 @@ import NewWhyUs from "../components/new/newWhyUs";
 import "../languages/IMLocalize";
 import NewBankCardOldDesign from "../components/new/NewBankCardOldDesign";
 import Bank from "../components/Bank";
+import SearchBar from "../components/newHome/SearchBar";
 
 class Home extends React.Component<any, any> {
   render() {
@@ -19,7 +20,7 @@ class Home extends React.Component<any, any> {
       <div>
         <NewNavbar />
         <NewHero />
-        <NewSearchBar
+        {/* <NewSearchBar
           isOnHomePage={true}
           searchFunction={null}
           monthlySalary={0}
@@ -28,6 +29,16 @@ class Home extends React.Component<any, any> {
           duration={0}
           useMaxLoan={false}
         />
+         */}
+          {/* <SearchBar
+          isOnHomePage={true}
+          searchFunction={null}
+          monthlySalary={0}
+          loanAmount={0}
+          jobSector={""}
+          duration={0}
+          useMaxLoan={false}
+        /> */}
         <NewWhyUs />
         <NewContact />
         <NewFooter />

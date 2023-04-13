@@ -350,7 +350,8 @@ function Compare(props: Props) {
             <InfoDiv style={{ marginTop: "48px" }}>
               <InfoHeadline>Oops...</InfoHeadline>
               <InfoCaption>
-                No banks matched your inputs. Try a different search.
+              لا توجد بنوك مطابقة لمدخلاتك. جرب بحثًا مختلفًا
+                 {/* No banks matched your inputs. Try a different search. */}
               </InfoCaption>
             </InfoDiv>
           )}
