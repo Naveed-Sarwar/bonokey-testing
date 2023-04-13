@@ -230,7 +230,7 @@ function NewSearchBar(props: Props) {
       >
         <InputGridDiv>
           <InputDiv selected={monthlySalaryFocused}>
-            <InputHeadline>{t("index:monthlySalary")}</InputHeadline>
+            <InputHeadline>الراتب</InputHeadline>
             {isEditingMonthlySalary ? (
               <TextMain>
                 <TextInput
@@ -258,9 +258,7 @@ function NewSearchBar(props: Props) {
                   }}
                 />
                 <div>
-                  <p style={{ fontSize: "1rem", fontWeight: "400" }}>
-                    {t("index:sar")}
-                  </p>
+                  <p style={{ fontSize: "1rem", fontWeight: "400" }}>ر.س </p>
                 </div>
               </TextMain>
             ) : (
@@ -279,15 +277,13 @@ function NewSearchBar(props: Props) {
                   }`}
                 />
                 <div>
-                  <p style={{ fontSize: "1rem", fontWeight: "400" }}>
-                    {t("index:sar")}
-                  </p>
+                  <p style={{ fontSize: "1rem", fontWeight: "400" }}>ر.س </p>
                 </div>
               </TextMain>
             )}
           </InputDiv>
           <InputDiv selected={loanAmountFocused}>
-            <InputHeadline>{t("index:loanAmount")}</InputHeadline>
+            <InputHeadline>مبلغ التمويل</InputHeadline>
             {isEditingLoanAmount ? (
               <TextMain>
                 <TextInput
@@ -327,12 +323,10 @@ function NewSearchBar(props: Props) {
                   }}
                   onClick={() => setUseMaxLoan(!useMaxLoan)}
                 >
-                  <p style={{ fontSize: "1rem", fontWeight: "400" }}>
-                    {t("index:sar")}
-                  </p>
+                  <p style={{ fontSize: "1rem", fontWeight: "400" }}>ر.س </p>
                   <CheckBoxInput type="checkbox" checked={useMaxLoan} />
                   <p style={{ fontSize: "1rem", fontWeight: "400" }}>
-                    {t("index:max")}
+                    الحد الاعلى{" "}
                   </p>
                 </div>
               </TextMain>
@@ -365,11 +359,10 @@ function NewSearchBar(props: Props) {
                   onClick={() => setUseMaxLoan(!useMaxLoan)}
                 >
                   <p style={{ fontSize: "1rem", fontWeight: "400" }}>
-                    {t("index:sar")}
-                  </p>
+                 ر.س                   </p>
                   <CheckBoxInput type="checkbox" checked={useMaxLoan} />
                   <p style={{ fontSize: "1rem", fontWeight: "400" }}>
-                    {t("index:max")}
+                    الحدالاعلى{" "}
                   </p>
                 </div>
               </TextMain>
@@ -401,7 +394,7 @@ function NewSearchBar(props: Props) {
             </JobSectorSelect>
           </InputDiv>
           <InputDiv selected={durationFocused}>
-            <InputHeadline>{t("index:duration")}</InputHeadline>
+            <InputHeadline>المدة (سنوات)</InputHeadline>
             <div style={{ display: "flex" }}>
               <DurationRangeInput
                 type="range"
@@ -434,9 +427,7 @@ function NewSearchBar(props: Props) {
                   },
                 }}
               >
-                <SearchButton disabled={!enableSearchButton}>
-                  {t("index:search")}
-                </SearchButton>
+                <SearchButton disabled={!enableSearchButton}>بحث </SearchButton>
               </Link>
             ) : (
               <SearchButton
@@ -451,7 +442,7 @@ function NewSearchBar(props: Props) {
                   );
                 }}
               >
-                {t("index:search")}
+                بحث{" "}
               </SearchButton>
             )}
           </InputDiv>
